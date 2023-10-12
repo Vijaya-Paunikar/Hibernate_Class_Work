@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+  
+<hibernate-configuration>  
+  
+  <!-- Hibernate Configuration -->
+  
+    <session-factory>  
+    
+    	<!-- Automatic Database Schema Update Behavior -->
+        <property name="hbm2ddl.auto">update</property>  
+        
+        <!-- Define the SQL Dialect for MySQL -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>  
+        
+        <!-- Database Connection Configuration -->
+        <property name="connection.url">jdbc:mysql://localhost:3306/Marksheet</property>  
+        <property name="connection.username">root</property>  
+        <property name="connection.password">root</property>  
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property> 
+        
+        <!-- Enable SQL Query Logging for Debugging -->
+        <property name="show_sql">true</property>
+       
+     <!-- Entity Class Mapping -->  
+    <mapping class="com.hbm.example.MarksheetGenerationSystem.Marksheet"/>  
+    </session-factory>  
+  
+</hibernate-configuration>
